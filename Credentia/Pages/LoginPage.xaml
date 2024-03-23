@@ -44,8 +44,7 @@
             <Button Text="Login"
                     Clicked="LoginButtonClickedAsync"
                     VerticalOptions="Center"
-                    HeightRequest="48"
-                    WidthRequest="165"
+                    Style="{StaticResource LogButtonStyle}"
                     Margin="0, 100, 0, 0"/>
         </VerticalStackLayout>
         

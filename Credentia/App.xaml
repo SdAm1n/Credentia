@@ -15,6 +15,12 @@
             <Color x:Key="bgColor3">#EAEEEE</Color>
             <x:Double x:Key="FontSize">24</x:Double>
 
+            <Style x:Key="LogButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="WidthRequest" Value="165" />
+
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
