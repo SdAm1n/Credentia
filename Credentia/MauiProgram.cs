@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Credentia.Pages;
+using Credentia.Services;
+using Microsoft.Extensions.Logging;
 
 using Microsoft.Maui.Foldable;
 namespace Credentia
@@ -20,6 +22,12 @@ namespace Credentia
     		builder.Logging.AddDebug();
 #endif
             builder.UseFoldable();
+
+            builder.Services.AddTransient<AuthService>();
+            builder.Services.AddTransient<LoadingPage>();
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<ProfilePage>();
+
             return builder.Build();
         }
     }

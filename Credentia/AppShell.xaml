@@ -14,7 +14,25 @@
             <Image Source="logo.png" />
         </Grid>
     </Shell.FlyoutHeader>
+
+    <!--for loading screen-->
+        <ShellContent
+            ContentTemplate="{DataTemplate pages:LoadingPage}"
+            Route="LoadingPage" 
+            Shell.FlyoutBehavior="Disabled"
+            Shell.FlyoutItemIsVisible="False"/>
+
     
+        <!--for login screen-->
+        <ShellContent
+            ContentTemplate="{DataTemplate pages:LoginPage}"
+            Route="LoginPage" 
+            Shell.FlyoutBehavior="Disabled"    
+            Shell.FlyoutItemIsVisible="False"/>
+
+
+
+
     <FlyoutItem Title="Logins">
         <ShellContent
         ContentTemplate="{DataTemplate local:MainPage}"
@@ -24,38 +42,38 @@
     <FlyoutItem Title="Profile">
     <ShellContent
         ContentTemplate="{DataTemplate pages:ProfilePage}"
-        Route="MainPage" />
+        Route="ProfilePage" />
     </FlyoutItem>
 
 
     <FlyoutItem Title="Card">
         <ShellContent
         ContentTemplate="{DataTemplate pages:CardPage}"
-        Route="MainPage" />
+        Route="CardPage" />
     </FlyoutItem>
 
     <FlyoutItem Title="Identity">
         <ShellContent
     ContentTemplate="{DataTemplate pages:IdentityPage}"
-    Route="MainPage" />
+    Route="IdentityPage" />
     </FlyoutItem>
 
     <FlyoutItem Title="Secure Note">
         <ShellContent
     ContentTemplate="{DataTemplate pages:SecureNotePage}"
-    Route="MainPage" />
+    Route="SecureNotePage" />
     </FlyoutItem>
 
     <FlyoutItem Title="Password Generator">
         <ShellContent
     ContentTemplate="{DataTemplate pages:PasswordGeneratorPage}"
-    Route="MainPage" />
+    Route="PasswordGeneratorPage" />
     </FlyoutItem>
 
     <FlyoutItem Title="Settings">
         <ShellContent
     ContentTemplate="{DataTemplate pages:SettingsPage}"
-    Route="MainPage" />
+    Route="SettingsPage" />
     </FlyoutItem>
 
 </Shell>
