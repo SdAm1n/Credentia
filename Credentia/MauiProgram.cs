@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 
+using Microsoft.Maui.Foldable;
+
 namespace Credentia
 {
     public static class MauiProgram
@@ -18,7 +20,7 @@ namespace Credentia
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.UseFoldable();
             return builder.Build();
         }
     }
