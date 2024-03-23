@@ -9,6 +9,12 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="bgColor1">#F8FBFC</Color>
+            <Color x:Key="bgColor2">#EEF6F7</Color>
+            <Color x:Key="bgColor3">#EAEEEE</Color>
+            <x:Double x:Key="FontSize">24</x:Double>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

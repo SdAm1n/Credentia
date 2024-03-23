@@ -2,14 +2,54 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Credentia.Pages.LoginPage"
-             Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Login Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="LoginPage"
+             Shell.NavBarIsVisible="False">
 
-        <Button Text="Login"
-                Clicked="LoginButtonClickedAsync"/>
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout Grid.Column="0" 
+                             BackgroundColor="{StaticResource bgColor1}"
+                             
+                             >
+            <Image Source="logo.png"
+                   WidthRequest="589"
+                   HeightRequest="300"
+                   Margin="52, 238, 0, 0"
+                   />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Column="1"
+                             BackgroundColor="{StaticResource bgColor2}">
+
+            <HorizontalStackLayout VerticalOptions="Start" Margin="42, 244, 0, 0">
+                <Label Text="Username" FontSize="{StaticResource FontSize}" Padding="30" Margin="0, 0, 70, 0"/>
+                <Entry Placeholder="username"
+                       HeightRequest="61"
+                       WidthRequest="368"
+                       />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout VerticalOptions="Center" Margin="42, 0, 0, 0">
+                <Label Text="Master Password" FontSize="{StaticResource FontSize}" Padding="30"/>
+                <Entry Placeholder="password"
+                       HeightRequest="61"
+                       WidthRequest="368"
+                       />
+            </HorizontalStackLayout>
+
+            <Button Text="Login"
+                    Clicked="LoginButtonClickedAsync"
+                    VerticalOptions="Center"
+                    HeightRequest="48"
+                    WidthRequest="165"
+                    Margin="0, 100, 0, 0"/>
+        </VerticalStackLayout>
+        
+    </Grid>
+    
+    
 </ContentPage>
