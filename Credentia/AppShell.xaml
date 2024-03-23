@@ -4,12 +4,58 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Credentia"
-    Shell.FlyoutBehavior="Disabled"
-    Title="Credentia">
+    xmlns:pages="clr-namespace:Credentia.Pages"
+    Shell.FlyoutBehavior="Locked"
+    FlyoutBackgroundColor="#F8FBFC"
+    FlyoutIcon="logo.png">
 
-    <ShellContent
-        Title="Home"
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100">
+            <Image Source="logo.png" />
+        </Grid>
+    </Shell.FlyoutHeader>
+    
+    <FlyoutItem Title="Logins">
+        <ShellContent
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Profile">
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:ProfilePage}"
+        Route="MainPage" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Card">
+        <ShellContent
+        ContentTemplate="{DataTemplate pages:CardPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Identity">
+        <ShellContent
+    ContentTemplate="{DataTemplate pages:IdentityPage}"
+    Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Secure Note">
+        <ShellContent
+    ContentTemplate="{DataTemplate pages:SecureNotePage}"
+    Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Password Generator">
+        <ShellContent
+    ContentTemplate="{DataTemplate pages:PasswordGeneratorPage}"
+    Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings">
+        <ShellContent
+    ContentTemplate="{DataTemplate pages:SettingsPage}"
+    Route="MainPage" />
+    </FlyoutItem>
 
 </Shell>
