@@ -11,6 +11,16 @@
         {
             
         }
+
+        void OnFrameTapped(object sender, EventArgs e)
+        {
+            
+        }
+
+        void OnEditButtonClicked(object sender, EventArgs e)
+        {
+            
+        }
     }
 
 }

@@ -58,7 +58,9 @@
 	  <None Remove="Resources\Images\add_button.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\nothing_found.jpg" />
+	  <None Remove="Resources\Images\password_health.png" />
 	  <None Remove="Resources\Images\spotify_logo.png" />
+	  <None Remove="Resources\Images\three_dots.png" />
 	</ItemGroup>
 
 	<ItemGroup>

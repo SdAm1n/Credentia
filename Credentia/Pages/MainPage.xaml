@@ -9,35 +9,40 @@
         <foldable:TwoPaneView.Pane1>
             <VerticalStackLayout BackgroundColor="#EEF6F7">
 
-                <HorizontalStackLayout Padding="10">
-                    <Frame CornerRadius="20" 
+                <Grid Padding="10">
+                    <Frame Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           CornerRadius="20" 
                            Padding="0" 
                            WidthRequest="396"
                            HeightRequest="46"
                            BackgroundColor="LightGray"
-                           VerticalOptions="Center"
+                           VerticalOptions="CenterAndExpand"
                            HorizontalOptions="Start">
                         
                         <SearchBar Placeholder="Search..."/>
                     </Frame>
 
-                    <ImageButton Source="add_button.png"
+                    <ImageButton Grid.Column="2"
+                                 Source="add_button.png"
+                                 BackgroundColor="#EEF6F7"
                                  Clicked="OnImageButtonClicked"
                                  WidthRequest="45"
                                  HeightRequest="45"
                                  HorizontalOptions="End"
                                  VerticalOptions="Center" 
-                                 Margin="80, 0, 0, 0"/> 
-                </HorizontalStackLayout>
+                                 Margin="15, 0, 0, 0"/> 
+                </Grid>
 
                 <!--title and sort by-->
                 <HorizontalStackLayout Spacing="10" Margin="20,0,0,0">
-                    <Label Text="All Passwords" FontSize="32" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Label Text="All Passwords" FontSize="32" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
                     
-                    <Label Text="Sort By:" VerticalOptions="Center" Margin="130, 0, 0, 0"/>
+                    <Label Text="Sort By :" VerticalOptions="Center" Margin="55, 0, 0, 0" HorizontalOptions="End"/>
                         <Picker x:Name="picker"
                                 SelectedItem="1"
-                                VerticalOptions="Center">
+                                VerticalOptions="Center"
+                                HeightRequest="30">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Sort A-Z </x:String>
@@ -51,6 +56,9 @@
                 <Grid Padding="10">
                     <Frame HeightRequest="66"
                            Padding="0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFrameTapped"/>
+                        </Frame.GestureRecognizers>
                         <Grid Padding="0"
                               ColumnDefinitions="110, *">
                             <Image Source="spotify_logo.png"
@@ -58,12 +66,23 @@
                                    WidthRequest="50"
                                    Aspect="AspectFill"/>
                             <VerticalStackLayout Grid.Column="1"
-                                                 Padding="10"
+                                                 Padding="5"
+                                                 Margin="0,0,0,10"
                                                  VerticalOptions="Center">
                                 <Label x:Name="nameLabel" Text="Spotify"/>
                                 <Label x:Name="emailLabel" Text="email@gmail.com"/>
 
                             </VerticalStackLayout>
+
+                            <VerticalStackLayout Grid.Column="2"
+                                                 Padding="20">
+                                <Image Source="three_dots.png"
+                                       HeightRequest="25"
+                                       WidthRequest="25"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"/>
+                            </VerticalStackLayout>
+                            
                         </Grid>
                         
                     </Frame>
@@ -72,9 +91,61 @@
                 
         </foldable:TwoPaneView.Pane1>
         
+        <!--Second Part of Screen Starts Here--> 
         <foldable:TwoPaneView.Pane2>
             <VerticalStackLayout BackgroundColor="#EAEEEE">
+                <HorizontalStackLayout HeightRequest="75" Margin="30, 30, 30, 0">
+                    <Image Source="spotify_logo.png"
+                           HeightRequest="70"
+                           WidthRequest="70"/>
+
+                    <VerticalStackLayout Padding="10" VerticalOptions="Center">
+                    <Label Text="Spotify" FontSize="32" FontAttributes="Bold"/>
+                    <Label Text="Nusrat Jahan Sumaiya" FontSize="15"/>
+                    </VerticalStackLayout>
+
+                    <Button Text="Edit"
+                            TextColor="#FC9630"
+                            WidthRequest="72"
+                            HeightRequest="33"
+                            BackgroundColor="White"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"
+                            Clicked="OnEditButtonClicked"/>
+                </HorizontalStackLayout>
+
+                <VerticalStackLayout Padding="20" Spacing="10">
+                <Label Text="Username" />
+                <Entry x:Name="usernameEntry" Placeholder="username" Text="Nusrat"/>
                 
+                <Label Text="Password"/>
+                <Entry x:Name="passwordEntry" Placeholder="password" Text="pass1234"/>
+                
+                <Label Text="URL"/>
+                <Entry x:Name="urlEntry" Placeholder="https://example.com" Text="https://spotify.com"/>
+                
+                </VerticalStackLayout>
+
+                <HorizontalStackLayout Padding="20" Spacing="20" Margin="0, 30, 0, 0">
+                    <Image Source="password_health.png" 
+                           HeightRequest="159"
+                           WidthRequest="151"/>
+
+                    <VerticalStackLayout Margin="0,30,0,0">
+                        <Label Text="Password Score: 82%" FontSize="20" FontAttributes="Bold"/>
+                        <Label Text="Password Strength: Good" FontSize="14"/>
+                    </VerticalStackLayout>
+                    
+                </HorizontalStackLayout>
+
+                <VerticalStackLayout Padding="20" Spacing="10">
+                    <Label Text="Last Modified" FontSize="14"/>
+                    <Label Text="22/03/2023 12:35 AM" FontSize="14"/>
+
+                    <Label Text="Created At" FontSize="14"/>
+                    <Label Text="22/03/2023 12:35 AM" FontSize="14"/>
+                </VerticalStackLayout>
+
             </VerticalStackLayout>
         </foldable:TwoPaneView.Pane2>
     </foldable:TwoPaneView>
