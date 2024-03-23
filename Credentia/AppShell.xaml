@@ -6,12 +6,12 @@
     xmlns:local="clr-namespace:Credentia"
     xmlns:pages="clr-namespace:Credentia.Pages"
     Shell.FlyoutBehavior="Locked"
-    FlyoutBackgroundColor="#F8FBFC"
-    FlyoutIcon="logo.png">
+    FlyoutBackgroundColor="{StaticResource bgColor1}"
+    FlyoutIcon="logo2.png">
 
     <Shell.FlyoutHeader>
         <Grid HeightRequest="100">
-            <Image Source="logo.png" />
+            <Image Source="logo2.png" />
         </Grid>
     </Shell.FlyoutHeader>
 
@@ -33,44 +33,44 @@
 
 
 
-    <FlyoutItem Title="Logins">
+    <FlyoutItem Title="Logins" Icon="logins.png">
         <ShellContent
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Profile">
+    <FlyoutItem Title="Profile" Icon="profile.jpeg">
     <ShellContent
         ContentTemplate="{DataTemplate pages:ProfilePage}"
         Route="ProfilePage" />
     </FlyoutItem>
 
 
-    <FlyoutItem Title="Card">
+    <FlyoutItem Title="Card" Icon="card.png">
         <ShellContent
         ContentTemplate="{DataTemplate pages:CardPage}"
         Route="CardPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Identity">
+    <FlyoutItem Title="Identity" Icon="identity.png">
         <ShellContent
     ContentTemplate="{DataTemplate pages:IdentityPage}"
     Route="IdentityPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Secure Note">
+    <FlyoutItem Title="Secure Note" Icon="secure_note.png">
         <ShellContent
     ContentTemplate="{DataTemplate pages:SecureNotePage}"
     Route="SecureNotePage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Password Generator">
+    <FlyoutItem Title="Password Generator" Icon="password_generator.png">
         <ShellContent
     ContentTemplate="{DataTemplate pages:PasswordGeneratorPage}"
     Route="PasswordGeneratorPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Settings">
+    <FlyoutItem Title="Settings" Icon="setting.png">
         <ShellContent
     ContentTemplate="{DataTemplate pages:SettingsPage}"
     Route="SettingsPage" />
