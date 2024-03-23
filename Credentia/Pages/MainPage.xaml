@@ -76,11 +76,12 @@
 
                             <VerticalStackLayout Grid.Column="2"
                                                  Padding="20">
-                                <Image Source="three_dots.png"
+                                <Image Source="more.png"
                                        HeightRequest="25"
                                        WidthRequest="25"
                                        VerticalOptions="Center"
-                                       HorizontalOptions="End"/>
+                                       HorizontalOptions="End"
+                                       />
                             </VerticalStackLayout>
                             
                         </Grid>

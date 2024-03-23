@@ -65,6 +65,7 @@
 	  <None Remove="Resources\Images\logins.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\logo2.png" />
+	  <None Remove="Resources\Images\more.png" />
 	  <None Remove="Resources\Images\nothing_found.jpg" />
 	  <None Remove="Resources\Images\password_health.png" />
 	  <None Remove="Resources\Images\profile.jpeg" />
