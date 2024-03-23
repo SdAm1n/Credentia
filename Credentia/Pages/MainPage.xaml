@@ -8,8 +8,48 @@
     <foldable:TwoPaneView>
         <foldable:TwoPaneView.Pane1>
             <VerticalStackLayout BackgroundColor="#EEF6F7">
+
+                <HorizontalStackLayout Padding="10">
+                    <Frame CornerRadius="20" 
+                           Padding="0" 
+                           WidthRequest="396"
+                           HeightRequest="46"
+                           BackgroundColor="LightGray"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start">
+                        
+                        <SearchBar Placeholder="Search..."/>
+                    </Frame>
+
+                    <ImageButton Source="add_button.png"
+                                 Clicked="OnImageButtonClicked"
+                                 WidthRequest="45"
+                                 HeightRequest="45"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center" 
+                                 Margin="80, 0, 0, 0"/> 
+                </HorizontalStackLayout>
+
+                <!--title and sort by-->
+                <HorizontalStackLayout Spacing="10" Margin="20,0,0,0">
+                    <Label Text="All Passwords" FontSize="32" FontAttributes="Bold" VerticalOptions="Center"/>
+                    
+                    <Label Text="Sort By:" VerticalOptions="Center" Margin="130, 0, 0, 0"/>
+                        <Picker x:Name="picker"
+                                SelectedItem="1"
+                                VerticalOptions="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Sort A-Z </x:String>
+                                <x:String>Sort Z-A </x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                </HorizontalStackLayout>
+                
                 <Grid Padding="10">
-                    <Frame HeightRequest="90"
+                    <Frame HeightRequest="66"
                            Padding="0">
                         <Grid Padding="0"
                               ColumnDefinitions="110, *">

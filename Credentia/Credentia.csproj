@@ -55,16 +55,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\add_button.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\nothing_found.jpg" />
 	  <None Remove="Resources\Images\spotify_logo.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls.Foldable" Version="8.0.14" />
+		<PackageReference Include="Syncfusion.Maui.Inputs" Version="25.1.35" />
 	</ItemGroup>
 
 	<ItemGroup>
