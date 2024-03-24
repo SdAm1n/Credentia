@@ -120,9 +120,14 @@
                 <VerticalStackLayout Padding="20" Spacing="10">
                 <Label Text="Username" />
                 <Entry x:Name="usernameEntry" Placeholder="username" Text="Nusrat"/>
-                
-                <Label Text="Password"/>
-                <Entry x:Name="passwordEntry" Placeholder="password" Text="pass1234"/>
+
+                    <Label Text="Password"/>
+
+                    <!--password box with toggle button-->
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="PasswordEntry" Placeholder="password" Text="pass1234" IsPassword="True" WidthRequest="400"/>
+                        <Button Text="👁️" Clicked="TogglePasswordVisibility" BackgroundColor="{StaticResource bgColor3}"/>
+                    </StackLayout>
                 
                 <Label Text="URL"/>
                 <Entry x:Name="urlEntry" Placeholder="https://example.com" Text="https://spotify.com"/>

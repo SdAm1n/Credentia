@@ -36,6 +36,7 @@
             <HorizontalStackLayout VerticalOptions="Center" Margin="42, 0, 0, 0">
                 <Label Text="Master Password" FontSize="{StaticResource FontSize}" Padding="30"/>
                 <Entry Placeholder="password"
+                       IsPassword="True"
                        HeightRequest="61"
                        WidthRequest="368"
                        />

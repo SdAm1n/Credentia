@@ -21,6 +21,11 @@
         {
             
         }
+
+        void TogglePasswordVisibility(object sender, EventArgs e)
+        {
+            PasswordEntry.IsPassword = !PasswordEntry.IsPassword;
+        }
     }
 
 }
