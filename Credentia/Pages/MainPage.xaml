@@ -4,11 +4,12 @@
              x:Class="Credentia.MainPage"
              xmlns:foldable="clr-namespace:Microsoft.Maui.Controls.Foldable;assembly=Microsoft.Maui.Controls.Foldable">
 
-
+    <!--first part of the screen-->
     <foldable:TwoPaneView>
         <foldable:TwoPaneView.Pane1>
             <VerticalStackLayout BackgroundColor="#EEF6F7">
 
+                <!--search bar and add item button-->
                 <Grid Padding="10">
                     <Frame Grid.Column="0"
                            Grid.ColumnSpan="2"
@@ -53,6 +54,7 @@
 
                 </HorizontalStackLayout>
                 
+                <!--all passwords frame-->
                 <Grid Padding="10">
                     <Frame HeightRequest="66"
                            Padding="0">
